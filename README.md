@@ -7,34 +7,28 @@ Una versión repensada del sistema de inscripciones de la Universidad Argentina 
 —
 
 ## 👤 Grupo N°13
-- ⤷ Ximena Romero · `888-Rome`
-- ⤷ 
-- ⤷ 
-- ⤷ 
-- ⤷ 
-- ⤷ 
-- ⤷ 
+1️⃣ Ximena Romero · `888-Rome`
 
 —
 ## ❶ Propuesta
 Ver el documento de Google para contexto, problema detectado, alcance, solución propuesta y justificaciones.
 
-[Google Document](https://docs.google.com/document/d/1Bgh0efhnsvZm-DZ7xvgswQhYsSMqMpHTTmuWCZWbOQ0/edit?usp=drive_link)
+[Google Document](https://docs.google.com/document/d/1Bgh0efhnsvZm-DZ7xvgswQhYsSMqMpHTTmuWCZWbOQ0/edit?usp=drive_link).
 
 —
 
 ## ❷ Stack
-⤷ Java 17 · Spring Boot · Spring Data JPA
-⤷ Spring Security + JWT
-⤷ Lombok · Maven
-⤷ H2 (en memoria, seedeada al iniciar)
-⤷ Frontend HTML · CSS · React
+- Java 17 · Spring Boot · Spring Data JPA
+- Spring Security + JWT
+- Lombok · Maven
+- H2 (en memoria, seedeada al iniciar)
+- Frontend HTML · CSS · React
 
 —
 
 ## ❸ Patrones
 Facade · Strategy · MVC · Observer · Repository
-> Detalle y justificación en `docs/propuesta.md`
+Detalle y justificación en [Google Document](https://docs.google.com/document/d/1Bgh0efhnsvZm-DZ7xvgswQhYsSMqMpHTTmuWCZWbOQ0/edit?usp=drive_link).
 
 —
 ## ❹ Estructura del proyecto
@@ -63,8 +57,8 @@ src/
 ## ❺ ¿Cómo correrlo?
 
 👉 **Prerrequisitos**
-⤷ Java 17 o superior
-⤷ Maven 3.8 o superior
+- Java 17 o superior
+- Maven 3.8 o superior
 
 📌 **Pasos**
 
