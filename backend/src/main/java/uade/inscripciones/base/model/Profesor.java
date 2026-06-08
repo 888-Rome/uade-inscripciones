@@ -2,26 +2,35 @@ package uade.inscripciones.base.model;
 
 // ▶ Imports ═══════════════════════════════════════════════════════════════════════════════════════════════════════════
 import jakarta.persistence.*;
-import lombok.*;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
+import lombok.*;
 
 // ═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
-// ⌞ PROFESOR ⌝
+// ⌞ Profesor ⌝
 // ═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 @Entity
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
+@Getter @Setter
+@NoArgsConstructor @AllArgsConstructor @Builder
 
 public class Profesor {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long legajo;
+
+    // ▶ Identidad ─────────────────────────────────────────────────────────────────────────────────────────────────────
+    @Id
+    private Long legajo;            // asignado, no autogenerado
 
     @Column(nullable = false, unique = true)
     private String dni;
 
     @Column(nullable = false)
-    private String nombreApellido;
+    private String nombres;
 
-    @OneToMany(mappedBy = "profesor") @Builder.Default
-    private ArrayList<Materia> materias;
+    @Column(nullable = false)
+    private String apellidos;
+
+    // ▶ Relaciones ────────────────────────────────────────────────────────────────────────────────────────────────────
+    @ManyToMany(mappedBy = "profesores") @Builder.Default
+    private List<Clase> clases = new ArrayList<>();
+
+// ═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 }

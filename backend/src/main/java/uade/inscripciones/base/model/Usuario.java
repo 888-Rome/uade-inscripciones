@@ -2,39 +2,31 @@ package uade.inscripciones.base.model;
 
 // ▶ Imports ═══════════════════════════════════════════════════════════════════════════════════════════════════════════
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
 import lombok.*;
-import uade.inscripciones.base.enums.TipoNotificacionEnum;
+import uade.inscripciones.base.enums.RolEnum;
 
 // ═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
-// ⌞ Notificacion ⌝
+// ⌞ Usuario ⌝
 // ═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 @Entity
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor @Builder
 
-public class Notificacion {
+public class Usuario {
 
     // ▶ Identidad ─────────────────────────────────────────────────────────────────────────────────────────────────────
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // ▶ Contenido ─────────────────────────────────────────────────────────────────────────────────────────────────────
-    @Column(nullable = false, length = 500)
-    private String mensaje;
+    // ▶ Credenciales ──────────────────────────────────────────────────────────────────────────────────────────────────
+    @Column(nullable = false, unique = true)
+    private String email;
+
+    @Column(nullable = false)
+    private String passwordHash;
 
     @Enumerated(EnumType.STRING) @Column(nullable = false)
-    private TipoNotificacionEnum tipo;
-
-    @Column(nullable = false)
-    private LocalDateTime fechaHora;
-
-    @Column(nullable = false)
-    private boolean leida;
-
-    // ▶ Relaciones ────────────────────────────────────────────────────────────────────────────────────────────────────
-    @ManyToOne(optional = false)
-    private Alumno alumno;
+    private RolEnum rol;
 
 // ═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 }

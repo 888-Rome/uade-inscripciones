@@ -60,19 +60,19 @@ public class DataSeeder implements CommandLineRunner {
         // ⌞ PERIODO ⌝
         Periodo periodo1 = Periodo.builder()
                 .cicloLectivo(2024)
-                .cuatrimestre(1)
+                .tipoPeriodo(1)
                 .build();
         periodoRepository.save(periodo1);
 
         Periodo periodo2 = Periodo.builder()
                 .cicloLectivo(2025)
-                .cuatrimestre(1)
+                .tipoPeriodo(1)
                 .build();
         periodoRepository.save(periodo2);
 
         Periodo periodo3 = Periodo.builder()
                 .cicloLectivo(2026)
-                .cuatrimestre(1)
+                .tipoPeriodo(1)
                 .build();
         periodoRepository.save(periodo3);
     }
