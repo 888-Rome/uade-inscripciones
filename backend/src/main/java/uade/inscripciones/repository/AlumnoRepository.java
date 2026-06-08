@@ -1,7 +1,10 @@
 package uade.inscripciones.repository;
 
-import org.springframework.stereotype.Repository;
+// ▶ Imports ═══════════════════════════════════════════════════════════════════════════════════════════════════════════
+import org.springframework.data.jpa.repository.JpaRepository;
+import uade.inscripciones.base.model.Alumno;
+import java.util.Optional;
 
-@Repository
-public interface AlumnoRepository {
+public interface AlumnoRepository extends JpaRepository<Alumno, Long> {
+    Optional<Alumno> findByUsuarioEmail(String email);
 }

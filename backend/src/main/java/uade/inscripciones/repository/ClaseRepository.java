@@ -1,7 +1,7 @@
 package uade.inscripciones.repository;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import uade.inscripciones.base.model.Clase;
 
-@Repository
-public interface ClaseRepository {
+public interface ClaseRepository extends JpaRepository<Clase, Long> {
 }

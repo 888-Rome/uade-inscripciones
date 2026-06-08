@@ -1,7 +1,8 @@
 package uade.inscripciones.repository;
 
-import org.springframework.stereotype.Repository;
+// ▶ Imports ═══════════════════════════════════════════════════════════════════════════════════════════════════════════
+import org.springframework.data.jpa.repository.JpaRepository;
+import uade.inscripciones.base.model.Materia;
 
-@Repository
-public interface MateriaRepository {
+public interface MateriaRepository extends JpaRepository<Materia, Long> {
 }
