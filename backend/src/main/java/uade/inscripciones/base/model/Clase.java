@@ -38,7 +38,7 @@ public class Clase {
     @Enumerated(EnumType.STRING) @Column(nullable = false)
     private InstanciaEnum instancia;
 
-    private String idioma;          // "ESPAÑOL" — String, no hay IdiomaEnum
+    private IdiomaEnum idioma;
 
     @Column(nullable = false)
     private int cupo;

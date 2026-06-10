@@ -26,7 +26,8 @@ public class Carrera {
     private String plan;
 
     // ▶ Relaciones ────────────────────────────────────────────────────────────────────────────────────────────────────
-    @ManyToMany @Builder.Default
+    /** Para evitar que Hibernate mezcle el orden en la DB, persistimos el índice con @OrderColumn. */
+    @ManyToMany @OrderColumn(name="orden") @Builder.Default
     private List<Materia> materias = new ArrayList<>();
 
 // ═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════

@@ -18,7 +18,7 @@ public class Alumno {
 
     // ▶ Identidad ─────────────────────────────────────────────────────────────────────────────────────────────────────
     @Id
-    private Long legajo;
+    private String legajo;
 
     @Column(nullable = false, unique = true)
     private String dni;

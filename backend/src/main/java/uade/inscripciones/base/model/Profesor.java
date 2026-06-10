@@ -17,7 +17,7 @@ public class Profesor {
 
     // ▶ Identidad ─────────────────────────────────────────────────────────────────────────────────────────────────────
     @Id
-    private Long legajo;            // asignado, no autogenerado
+    private String legajo;
 
     @Column(nullable = false, unique = true)
     private String dni;
