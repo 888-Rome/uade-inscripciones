@@ -1,5 +1,6 @@
 package uade.inscripciones.base.external;
 
+// ▶ Imports ═══════════════════════════════════════════════════════════════════════════════════════════════════════════
 import java.util.Set;
 
 /**
